@@ -1,0 +1,9 @@
+<div id="qrcode"></div>
+
+<script type="text/javascript">
+  var gid = guid();
+  new QRCode(document.getElementById("qrcode"), gid);
+
+  notify.gid = gid;
+  notify.parkConnection();
+</script>
