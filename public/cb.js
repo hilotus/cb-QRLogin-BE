@@ -45,6 +45,7 @@ var notify = {
           try {
             var value = JSON.parse(decodeURI(xhr.responseText));
             if (value.success) {
+              $('.title').text('Sign In...');
               window.location.href = value.token_authentication_url;
             }
           } catch (ex) {

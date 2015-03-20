@@ -30,7 +30,7 @@ module QRLogin
       if res.success?
         json success: true, external_id: res.external_id, oauth_token: res.oauth_token
       else
-        json success: false, error_message: res.error_message
+        json success: false, error_message: (res.error_message || res.check_status)
       end
     end
 
